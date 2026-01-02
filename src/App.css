@@ -1,0 +1,4 @@
+/* small additions specific to App layout */
+.App { min-height: 100vh; display: flex; flex-direction: column; }
+.App-main { flex: 1; }
+.nav-links { display: flex; align-items: center; }
