@@ -1,22 +1,16 @@
 import React from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
-import Home from './pages/Home';
-import Schedule from './pages/Schedule';
-import About from './pages/About';
+import Home from './pages/HomePage';
+import Schedule from './pages/EventSchedule';
+import About from './pages/AboutUs';
+import Navigation from './components/Navigation';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <nav className="nav">
-          <div className="brand">AC 2027 GA</div>
-          <div className="nav-links">
-            <NavLink to="/" end className={({isActive})=> isActive? 'active':''}>Home</NavLink>
-            <NavLink to="/schedule" className={({isActive})=> isActive? 'active':''}>Schedule</NavLink>
-            <NavLink to="/about" className={({isActive})=> isActive? 'active':''}>About</NavLink>
-          </div>
-        </nav>
+        <div className="brand">AC 2027 GA</div>
       </header>
 
       <main className="App-main">
@@ -27,6 +21,7 @@ function App() {
         </Routes>
       </main>
 
+      <Navigation />
       <footer className="App-footer">© AC 2027 GA</footer>
     </div>
   );
